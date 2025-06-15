@@ -329,12 +329,3 @@ npm start
 
 This project is licensed under the MIT License.
 
-## 👥 Team
-
-- Frontend Developer: [Name]
-- Backend Developer: [Name]
-- UI/UX Designer: [Name]
-
-## 📞 Support
-
-For support, email support@studynotion.com or join our Discord server.
