@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # StudyNotion - E-Learning Platform
 
 StudyNotion is a comprehensive ed-tech platform built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
@@ -329,6 +328,4 @@ npm start
 
 ## 📝 License
 
-This project is licensed under the MIT License.
-
->>>>>>> 154ebbf302441d45ef0699d9c9bf3a9f3c7763dc
+This project is licensed under the MIT License.\
