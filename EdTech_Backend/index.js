@@ -27,10 +27,24 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+// CORS Configuration
 app.use(
 	cors({
-		origin: process.env.FRONTEND_URL,
+		origin: function (origin, callback) {
+			// Remove trailing slash if it exists
+			const cleanOrigin = origin?.replace(/\/$/, '');
+			const cleanFrontendUrl = process.env.FRONTEND_URL?.replace(/\/$/, '');
+
+			if (!origin || cleanOrigin === cleanFrontendUrl) {
+				callback(null, true);
+			} else {
+				callback(new Error('Not allowed by CORS'));
+			}
+		},
 		credentials: true,
+		methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+		allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+		exposedHeaders: ['Content-Range', 'X-Content-Range']
 	})
 );
 app.use(
