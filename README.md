@@ -81,7 +81,7 @@ POST /api/v1/auth/signup
 
 - Register a new user
 - Body: { firstName, lastName, email, password, confirmPassword, accountType, contactNumber, otp }
-\`\`\`
+
 POST /api/v1/auth/login
 
 - Login user
